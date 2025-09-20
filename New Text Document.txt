@@ -1,0 +1,325 @@
+2025-09-20T12:18:55.000000000Z [inf]  Starting Container
+2025-09-20T12:18:56.546622345Z [inf]  
+2025-09-20T12:18:56.546627442Z [inf]     INFO  Preparing database.  
+2025-09-20T12:18:56.546633402Z [inf]  
+2025-09-20T12:18:56.546638154Z [inf]    Creating migration table ....................................... 6.70ms DONE
+2025-09-20T12:18:56.546642691Z [inf]  
+2025-09-20T12:18:56.546647381Z [inf]     INFO  Running migrations.  
+2025-09-20T12:18:56.546651368Z [inf]  
+2025-09-20T12:18:56.546655493Z [inf]    0001_01_01_000000_create_users_table .......................... 11.33ms DONE
+2025-09-20T12:18:56.546659698Z [inf]    0001_01_01_000001_create_cache_table ........................... 3.64ms DONE
+2025-09-20T12:18:56.546664746Z [inf]    0001_01_01_000002_create_jobs_table ............................ 9.61ms DONE
+2025-09-20T12:18:56.546669314Z [inf]    2025_09_08_161758_create_suppliers_table ....................... 1.88ms DONE
+2025-09-20T12:18:56.546673598Z [inf]    2025_09_08_161838_create_scrap_purchase_table .................. 2.20ms DONE
+2025-09-20T12:18:56.546678302Z [inf]    2025_09_08_161915_create_raw_materials_stock_table ............. 3.87ms DONE
+2025-09-20T12:18:56.546682941Z [inf]    2025_09_08_162933_create_electricity_log_table ................. 2.24ms DONE
+2025-09-20T12:18:56.546687100Z [inf]    2025_09_08_163000_create_cc_plant_table ........................ 6.83ms DONE
+2025-09-20T12:18:56.546691505Z [inf]    2025_09_08_163030_create_stock_table ........................... 2.34ms DONE
+2025-09-20T12:18:56.546696871Z [inf]    2025_09_09_135048_add_billet_size_inch_to_cc_plant_table ....... 1.71ms DONE
+2025-09-20T12:18:56.546700957Z [inf]    2025_09_09_150852_add_date_to_cc_plant_table ................... 1.58ms DONE
+2025-09-20T12:18:56.546705528Z [inf]    2025_09_09_165237_add_cast_item_name_to_cc_plant_table ......... 1.87ms DONE
+2025-09-20T12:18:56.546711526Z [inf]    2025_09_09_173247_create_sales_table ........................... 2.61ms DONE
+2025-09-20T12:18:56.546716098Z [inf]    2025_09_10_100000_add_details_to_sales_table ................... 6.82ms DONE
+2025-09-20T12:18:56.546720893Z [inf]    2025_09_10_100001_create_payments_table ........................ 2.16ms DONE
+2025-09-20T12:18:56.546725404Z [inf]    2025_09_10_143017_create_customers_table ....................... 2.31ms DONE
+2025-09-20T12:18:56.546729648Z [inf]    2025_09_10_143331_modify_sales_for_customer ................... 19.64ms DONE
+2025-09-20T12:18:56.546733449Z [inf]    2025_09_10_191149_create_finished_good_stocks_table ............ 3.03ms DONE
+2025-09-20T12:18:56.546737463Z [inf]    2025_09_10_205214_add_item_name_and_billet_size_to_sales_table . 3.84ms DONE
+2025-09-20T12:18:56.546741210Z [inf]    2025_09_10_214542_add_soft_deletes_to_sales_table .............. 2.21ms DONE
+2025-09-20T12:18:56.546745575Z [inf]    2025_09_11_134233_make_sale_id_nullable_in_payments_table ...... 7.23ms DONE
+2025-09-20T12:18:56.546749808Z [inf]    2025_09_11_180637_add_supplier_id_to_payments_table ............ 8.68ms DONE
+2025-09-20T12:18:56.546753978Z [inf]    2025_09_11_181355_add_paid_and_remaining_amount_to_scrap_purchase_table  4.17ms DONE
+2025-09-20T12:18:56.546758167Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  0.28ms FAIL
+2025-09-20T12:18:56.546762516Z [inf]  
+2025-09-20T12:18:56.546766517Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:18:56.546770809Z [inf]  
+2025-09-20T12:18:56.546776193Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:18:56.546781933Z [inf]  
+2025-09-20T12:18:56.546786326Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:18:56.546789799Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:56.546794978Z [inf]      821▕                 );
+2025-09-20T12:18:56.546800090Z [inf]      822▕             }
+2025-09-20T12:18:56.546804210Z [inf]      823▕ 
+2025-09-20T12:18:56.546807978Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:18:56.546811674Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:56.546815622Z [inf]      826▕             );
+2025-09-20T12:18:56.546819429Z [inf]      827▕         }
+2025-09-20T12:18:56.546824175Z [inf]      828▕     }
+2025-09-20T12:18:56.546827983Z [inf]  
+2025-09-20T12:18:56.546831684Z [inf]    1   [internal]:0
+2025-09-20T12:18:56.546835811Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:18:56.546839545Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:18:56.546843215Z [inf]  
+2025-09-20T12:18:56.546847301Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:18:56.546851848Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:18:56.546855541Z [inf]  
+2025-09-20T12:18:57.140579214Z [inf]  
+2025-09-20T12:18:57.140588415Z [inf]     INFO  Running migrations.  
+2025-09-20T12:18:57.140593414Z [inf]  
+2025-09-20T12:18:57.143543213Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  2.38ms FAIL
+2025-09-20T12:18:57.161665150Z [inf]  
+2025-09-20T12:18:57.161672597Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:18:57.161678278Z [inf]  
+2025-09-20T12:18:57.161683250Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:18:57.161689774Z [inf]  
+2025-09-20T12:18:57.161695563Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:18:57.161701678Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:57.161709413Z [inf]      821▕                 );
+2025-09-20T12:18:57.161715687Z [inf]      822▕             }
+2025-09-20T12:18:57.161721612Z [inf]      823▕ 
+2025-09-20T12:18:57.161726587Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:18:57.161730970Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:57.161736090Z [inf]      826▕             );
+2025-09-20T12:18:57.161740788Z [inf]      827▕         }
+2025-09-20T12:18:57.161747249Z [inf]      828▕     }
+2025-09-20T12:18:57.161751893Z [inf]  
+2025-09-20T12:18:57.161757150Z [inf]    1   [internal]:0
+2025-09-20T12:18:57.161762230Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:18:57.161766471Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:18:57.161771547Z [inf]  
+2025-09-20T12:18:57.161777191Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:18:57.161781926Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:18:57.161786145Z [inf]  
+2025-09-20T12:18:58.167866460Z [inf]  
+2025-09-20T12:18:58.167873996Z [inf]     INFO  Running migrations.  
+2025-09-20T12:18:58.167879101Z [inf]  
+2025-09-20T12:18:58.167884347Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  1.79ms FAIL
+2025-09-20T12:18:58.177445308Z [inf]  
+2025-09-20T12:18:58.177454347Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:18:58.177459592Z [inf]  
+2025-09-20T12:18:58.177463995Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:18:58.177468024Z [inf]  
+2025-09-20T12:18:58.177472927Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:18:58.180846678Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:58.180854199Z [inf]      821▕                 );
+2025-09-20T12:18:58.180859488Z [inf]      822▕             }
+2025-09-20T12:18:58.180863969Z [inf]      823▕ 
+2025-09-20T12:18:58.180868666Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:18:58.180875012Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:58.180880222Z [inf]      826▕             );
+2025-09-20T12:18:58.180887553Z [inf]      827▕         }
+2025-09-20T12:18:58.180894134Z [inf]      828▕     }
+2025-09-20T12:18:58.180898386Z [inf]  
+2025-09-20T12:18:58.180903565Z [inf]    1   [internal]:0
+2025-09-20T12:18:58.180908625Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:18:58.180912692Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:18:58.180916576Z [inf]  
+2025-09-20T12:18:58.180922866Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:18:58.180927846Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:18:58.180932681Z [inf]  
+2025-09-20T12:18:59.496493987Z [inf]  
+2025-09-20T12:18:59.496510322Z [inf]     INFO  Running migrations.  
+2025-09-20T12:18:59.496517402Z [inf]  
+2025-09-20T12:18:59.496524335Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  2.22ms FAIL
+2025-09-20T12:18:59.518924234Z [inf]  
+2025-09-20T12:18:59.518934240Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:18:59.518940018Z [inf]  
+2025-09-20T12:18:59.518944871Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:18:59.518949757Z [inf]  
+2025-09-20T12:18:59.519048596Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:18:59.519054397Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:59.519060397Z [inf]      821▕                 );
+2025-09-20T12:18:59.519066481Z [inf]      822▕             }
+2025-09-20T12:18:59.519071081Z [inf]      823▕ 
+2025-09-20T12:18:59.519075051Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:18:59.519079928Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:18:59.519085017Z [inf]      826▕             );
+2025-09-20T12:18:59.519140766Z [inf]      827▕         }
+2025-09-20T12:18:59.519145606Z [inf]      828▕     }
+2025-09-20T12:18:59.519150337Z [inf]  
+2025-09-20T12:18:59.519154636Z [inf]    1   [internal]:0
+2025-09-20T12:18:59.519159260Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:18:59.519163382Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:18:59.519167278Z [inf]  
+2025-09-20T12:18:59.519171411Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:18:59.519175223Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:18:59.519179685Z [inf]  
+2025-09-20T12:19:00.565032731Z [inf]  
+2025-09-20T12:19:00.565038430Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:00.565043136Z [inf]  
+2025-09-20T12:19:00.565048599Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  1.74ms FAIL
+2025-09-20T12:19:00.565053657Z [inf]  
+2025-09-20T12:19:00.565058312Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:00.565062270Z [inf]  
+2025-09-20T12:19:00.565066406Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:00.565070598Z [inf]  
+2025-09-20T12:19:00.565075938Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:00.565080608Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:00.565089870Z [inf]      821▕                 );
+2025-09-20T12:19:00.565098668Z [inf]      822▕             }
+2025-09-20T12:19:00.565104117Z [inf]      823▕ 
+2025-09-20T12:19:00.565108593Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:00.565112566Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:00.565116593Z [inf]      826▕             );
+2025-09-20T12:19:00.565122063Z [inf]      827▕         }
+2025-09-20T12:19:00.565126877Z [inf]      828▕     }
+2025-09-20T12:19:00.565132425Z [inf]  
+2025-09-20T12:19:00.565136438Z [inf]    1   [internal]:0
+2025-09-20T12:19:00.565140621Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:00.565144782Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:00.565150376Z [inf]  
+2025-09-20T12:19:00.565155204Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:00.565159565Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:00.565163339Z [inf]  
+2025-09-20T12:19:01.744994888Z [inf]  
+2025-09-20T12:19:01.745001909Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:01.745007342Z [inf]  
+2025-09-20T12:19:01.745012483Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  1.78ms FAIL
+2025-09-20T12:19:01.754310025Z [inf]  
+2025-09-20T12:19:01.754317640Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:01.754322883Z [inf]  
+2025-09-20T12:19:01.754327650Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:01.754332195Z [inf]  
+2025-09-20T12:19:01.754337169Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:01.758658327Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:01.758669927Z [inf]      821▕                 );
+2025-09-20T12:19:01.758677176Z [inf]      822▕             }
+2025-09-20T12:19:01.758685196Z [inf]      823▕ 
+2025-09-20T12:19:01.758693717Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:01.758702723Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:01.758708795Z [inf]      826▕             );
+2025-09-20T12:19:01.758714434Z [inf]      827▕         }
+2025-09-20T12:19:01.758721465Z [inf]      828▕     }
+2025-09-20T12:19:01.758728487Z [inf]  
+2025-09-20T12:19:01.758735652Z [inf]    1   [internal]:0
+2025-09-20T12:19:01.758741979Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:01.758749408Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:01.758757201Z [inf]  
+2025-09-20T12:19:01.758763181Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:01.758769759Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:01.758776672Z [inf]  
+2025-09-20T12:19:02.730408049Z [inf]  
+2025-09-20T12:19:02.730416527Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:02.730423514Z [inf]  
+2025-09-20T12:19:02.730430043Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  1.62ms FAIL
+2025-09-20T12:19:02.741748385Z [inf]  
+2025-09-20T12:19:02.741759940Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:02.741768691Z [inf]  
+2025-09-20T12:19:02.741777247Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:02.741784243Z [inf]  
+2025-09-20T12:19:02.741792091Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:02.745234996Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:02.745243882Z [inf]      821▕                 );
+2025-09-20T12:19:02.745248462Z [inf]      822▕             }
+2025-09-20T12:19:02.745254639Z [inf]      823▕ 
+2025-09-20T12:19:02.745259645Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:02.745267206Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:02.745274853Z [inf]      826▕             );
+2025-09-20T12:19:02.745281728Z [inf]      827▕         }
+2025-09-20T12:19:02.745294101Z [inf]      828▕     }
+2025-09-20T12:19:02.745301696Z [inf]  
+2025-09-20T12:19:02.745308650Z [inf]    1   [internal]:0
+2025-09-20T12:19:02.745314572Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:02.745322739Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:02.745330078Z [inf]  
+2025-09-20T12:19:02.745342743Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:02.745349954Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:02.745369500Z [inf]  
+2025-09-20T12:19:03.661912714Z [inf]  
+2025-09-20T12:19:03.661920685Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:03.661926317Z [inf]  
+2025-09-20T12:19:03.661938511Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  1.62ms FAIL
+2025-09-20T12:19:03.671540456Z [inf]  
+2025-09-20T12:19:03.671548987Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:03.671554451Z [inf]  
+2025-09-20T12:19:03.671559680Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:03.671565602Z [inf]  
+2025-09-20T12:19:03.671570261Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:03.679403487Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:03.679410843Z [inf]      821▕                 );
+2025-09-20T12:19:03.679415969Z [inf]      822▕             }
+2025-09-20T12:19:03.679420222Z [inf]      823▕ 
+2025-09-20T12:19:03.679427059Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:03.679432781Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:03.679438739Z [inf]      826▕             );
+2025-09-20T12:19:03.679446068Z [inf]      827▕         }
+2025-09-20T12:19:03.679452921Z [inf]      828▕     }
+2025-09-20T12:19:03.679460610Z [inf]  
+2025-09-20T12:19:03.679467493Z [inf]    1   [internal]:0
+2025-09-20T12:19:03.679474373Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:03.679480174Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:03.679490378Z [inf]  
+2025-09-20T12:19:03.679499088Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:03.679505550Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:03.679511907Z [inf]  
+2025-09-20T12:19:04.596785520Z [inf]  
+2025-09-20T12:19:04.596792749Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:04.596798468Z [inf]  
+2025-09-20T12:19:04.603377613Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  2.04ms FAIL
+2025-09-20T12:19:04.625728084Z [inf]  
+2025-09-20T12:19:04.625738650Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:04.625744537Z [inf]  
+2025-09-20T12:19:04.625750019Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:04.625756067Z [inf]  
+2025-09-20T12:19:04.625760408Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:04.625765369Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:04.625769313Z [inf]      821▕                 );
+2025-09-20T12:19:04.625774656Z [inf]      822▕             }
+2025-09-20T12:19:04.625778975Z [inf]      823▕ 
+2025-09-20T12:19:04.625782981Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:04.625787529Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:04.625792481Z [inf]      826▕             );
+2025-09-20T12:19:04.625798424Z [inf]      827▕         }
+2025-09-20T12:19:04.625803730Z [inf]      828▕     }
+2025-09-20T12:19:04.625812526Z [inf]  
+2025-09-20T12:19:04.625818103Z [inf]    1   [internal]:0
+2025-09-20T12:19:04.625824839Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:04.625830053Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:04.625834531Z [inf]  
+2025-09-20T12:19:04.625838784Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:04.625843469Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:04.625852923Z [inf]  
+2025-09-20T12:19:05.582270201Z [inf]  
+2025-09-20T12:19:05.582276040Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:05.582281220Z [inf]  
+2025-09-20T12:19:05.586320318Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  2.09ms FAIL
+2025-09-20T12:19:05.606295375Z [inf]  
+2025-09-20T12:19:05.606302943Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:05.606309915Z [inf]  
+2025-09-20T12:19:05.606315269Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:05.606321412Z [inf]  
+2025-09-20T12:19:05.606327084Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:05.630521241Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:05.630525907Z [inf]      821▕                 );
+2025-09-20T12:19:05.630530887Z [inf]      822▕             }
+2025-09-20T12:19:05.630534898Z [inf]      823▕ 
+2025-09-20T12:19:05.630538688Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:05.630543050Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:05.630548452Z [inf]      826▕             );
+2025-09-20T12:19:05.630554307Z [inf]      827▕         }
+2025-09-20T12:19:05.630558796Z [inf]      828▕     }
+2025-09-20T12:19:05.630562912Z [inf]  
+2025-09-20T12:19:05.630566789Z [inf]    1   [internal]:0
+2025-09-20T12:19:05.630571800Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:05.630576031Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:05.630580417Z [inf]  
+2025-09-20T12:19:05.630585243Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:05.630589484Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:05.630593888Z [inf]  
+2025-09-20T12:19:06.541922599Z [inf]  
+2025-09-20T12:19:06.541926773Z [inf]     INFO  Running migrations.  
+2025-09-20T12:19:06.541930568Z [inf]  
+2025-09-20T12:19:06.541936204Z [inf]    2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table  1.41ms FAIL
+2025-09-20T12:19:06.541942046Z [inf]  
+2025-09-20T12:19:06.541946557Z [inf]     Illuminate\Database\QueryException 
+2025-09-20T12:19:06.541951090Z [inf]  
+2025-09-20T12:19:06.541955192Z [inf]    SQLSTATE[HY000]: General error: 1 near "CHANGE": syntax error (Connection: sqlite, SQL: ALTER TABLE scrap_purchase CHANGE total_amount_with_waste waste_amount DECIMAL(10, 2) NOT NULL)
+2025-09-20T12:19:06.541959678Z [inf]  
+2025-09-20T12:19:06.541964494Z [inf]    at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+2025-09-20T12:19:06.541971235Z [inf]      820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:06.541976356Z [inf]      821▕                 );
+2025-09-20T12:19:06.541980972Z [inf]      822▕             }
+2025-09-20T12:19:06.541985385Z [inf]      823▕ 
+2025-09-20T12:19:06.541989310Z [inf]    ➜ 824▕             throw new QueryException(
+2025-09-20T12:19:06.541993063Z [inf]      825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+2025-09-20T12:19:06.542008830Z [inf]      826▕             );
+2025-09-20T12:19:06.542013658Z [inf]      827▕         }
+2025-09-20T12:19:06.542018308Z [inf]      828▕     }
+2025-09-20T12:19:06.542022180Z [inf]  
+2025-09-20T12:19:06.542026450Z [inf]    1   [internal]:0
+2025-09-20T12:19:06.542031274Z [inf]        Illuminate\Database\Schema\Blueprint::__construct(Object(Illuminate\Database\SQLiteConnection), "scrap_purchase", Object(Closure))
+2025-09-20T12:19:06.542035999Z [inf]        [2m+7 vendor frames [22m
+2025-09-20T12:19:06.542040087Z [inf]  
+2025-09-20T12:19:06.542044646Z [inf]    9   database/migrations/2025_09_11_210506_rename_total_amount_with_waste_in_scrap_purchase_table.php:16
+2025-09-20T12:19:06.542050150Z [inf]        Illuminate\Support\Facades\Facade::__callStatic("statement")
+2025-09-20T12:19:06.542054129Z [inf]  
